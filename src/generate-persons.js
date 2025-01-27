@@ -22,7 +22,7 @@ const generate_persons =  async () => {
         const first_name = first_names[Math.floor(Math.random() * first_names.length)];
         const last_name = last_names[Math.floor(Math.random() * last_names.length)];
         const email = `${first_name}.${last_name}@example.com`;
-        const salary = Math.floor(Math.random() * (120000 - 30000 )) + 30000;
+        const salary = (Math.random() * (150000 - 30000) + 30000).toFixed(2);
 
         persons_list.push([ID, first_name, last_name, email, salary])
     }
