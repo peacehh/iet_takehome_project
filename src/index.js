@@ -55,18 +55,26 @@ app.listen(PORT, () => {
 });
 
 app.get('/persons/:id', (req, res) => {
-    const Id = req.params.id;
-    const person = persons_json.find(person => person.Id === Id)
+    try {
+        const Id = req.params.id;
+        const person = persons_json.find(person => person.Id === Id)
 
-    if (person) {
-        res.send(person);
-    } else {
-        res.sendStatus(404);
+        if (person) {
+            res.send(person);
+        } else {
+            res.status(404).send("404 Error: Person not found");
+        }
+    } catch (error){
+        res.status(500).send("500 Error: Internal Server Error");
     }
 });
 
 app.get('/persons', (req, res) => {
-    res.send(persons_json.slice(0, 10));
+    try {
+        res.send(persons_json.slice(0, 10));
+    } catch (error) {
+        res.status(500).send("500 Error: Internal Server Error");
+    }
 });
 
 
