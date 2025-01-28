@@ -54,8 +54,19 @@ app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
 
+app.get('/persons/:id', (req, res) => {
+    const Id = req.params.id;
+    const person = persons_json.find(person => person.Id === Id)
+
+    if (person) {
+        res.send(person);
+    } else {
+        res.sendStatus(404);
+    }
+});
+
 app.get('/persons', (req, res) => {
-    res.send(persons_json.slice(0, 5));
+    res.send(persons_json.slice(0, 10));
 });
 
 
