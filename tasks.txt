@@ -15,9 +15,9 @@ Specifications
     c. Store valid records in memory as JSON
     d. Provide the following REST endpoints:
         i. GET /persons
-    1. returns 10 records
+            1. returns 10 records
         ii. GET /persons/<id>
-        1. returns the record for a specific "id"
+            1. returns the record for a specific "id"
 
 e. Listen on port 8080
 
