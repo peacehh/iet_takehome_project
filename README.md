@@ -41,9 +41,9 @@ npm install
 ```
 4. Generate person.csv records (if file doesnt exist): 
 ```
-node create_records1
+npm run create_persons
 ```
 5. Start Server: 
 ```
-node start
+npm run start
 ```
