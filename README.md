@@ -26,7 +26,7 @@ http://localhost:8080/persons/814ea5b9-02c8-444e-bda0-ff5cf54d8658
 ### Requirements
 - Node.js
 - npm
-## Initialization
+### Initialization
 1. Clone Repository: 
 ```
 git clone https://github.com/peacehh/iet_takehome_project
